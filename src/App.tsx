@@ -10,7 +10,7 @@ export default function App() {
   const [client, state, reCreateClient] = useClient(
     /*the argument 1 is the function to get the client (it have tu return a new client)*/
     () => {
-      const client = new Client("https://wsnet-server-react-test.onrender.com", { user: "admin", password: "1234" })
+      const client = new Client("wss://wsnet-server-react-test.onrender.com", { user: "admin", password: "1234" })
       //any client "on" logic (all onSay and onGet handeler)
       client.onSay("set-counter", data => setCounter(data))
 
